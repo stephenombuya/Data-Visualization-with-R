@@ -1,0 +1,22 @@
+# Create the data
+treatment <- c('Oyster Chips', 'Smooth Plastic', 'One Oyster Chip')
+right_crusher_left_cutter <- c(8, 2, 7)
+right_cutter_left_crusher <- c(9, 4, 9)
+right_and_left_cutter_no_crusher <- c(1, 20, 7)
+
+# Combine into a data frame
+data <- data.frame(treatment, right_crusher_left_cutter, 
+                   right_cutter_left_crusher, right_and_left_cutter_no_crusher)
+
+# Reshape the data for plotting
+library(reshape2)
+
+data_melt <- melt(data, id="treatment")
+
+
+
+# Plot the stacked frequency bar chart
+library(ggplot2)
+
+ggplot(data_melt, aes(x=treatment, y=value, fill=variable)) +
+  geom_bar(stat="identity")
