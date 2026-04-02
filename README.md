@@ -1,74 +1,138 @@
-# R Programs for Data Visualization
 
-This repository contains R programs that generate various types of charts and plots, commonly used for data visualization. The visualizations include:
+# Data Visualization with R — Advanced Toolkit
 
-1. **Bar Charts**
-2. **Plots**
-3. **Scatterplots**
-4. **Stacked Frequency Bar Charts**
-5. **Stacked Relative Frequency Bar Charts**
+A comprehensive and extensible collection of **R programs for professional data visualization**, built using modern libraries like **ggplot2** and **dplyr**. This project is designed to help developers, analysts, and data scientists create **high-quality, publication-ready visualizations** with clean and reproducible code.
 
-## Table of Contents
+----------
 
-- [Requirements](#requirements)
-- [Installation](#installation)
-- [Bar Charts](https://github.com/stephenombuya/Data-Visualization-with-R/blob/main/Bar%20Chart%20for%20US%20Gov't%20Expenditure%20in%202006.R)
-- [Plots](https://github.com/stephenombuya/Data-Visualization-with-R/blob/main/Scatterplot%20with%20a%20Loess%20Smooth%20Line.R)
-- [Scatterplots](https://github.com/stephenombuya/Data-Visualization-with-R/blob/main/Scatter%20Plot.R)
-- [Stacked Frequency Bar Charts](https://github.com/stephenombuya/Data-Visualization-with-R/blob/main/Stacked%20Frequency%20Bar%20Chart.R)
-- [Stacked Relative Frequency Bar Charts](https://github.com/stephenombuya/Data-Visualization-with-R/blob/main/Stacked%20Relative%20Frequency%20Bar%20Chart.R))
-- [Contributing](#contributing)
-- [License](#license)
+## 📌 Overview
 
----
+This repository goes beyond basic plotting — it provides structured, reusable scripts for generating **insightful and customizable visualizations** across multiple data scenarios.
 
-## Requirements
+It is ideal for:
 
-- R version 3.6 or above
-- The following R packages must be installed for data visualization:
-  - `ggplot2`
-  - `dplyr`
-  - `scales`
+-   📊 Data analysis projects
+-   📈 Reporting & dashboards
+-   🎓 Learning and teaching data visualization
+-   💼 Portfolio demonstration
 
-You can install the required libraries using the following commands:
+----------
 
-```r
-install.packages("ggplot2")
-install.packages("dplyr")
-install.packages("scales")
-```
-## Installation
+## ✨ Features
 
-1. Clone the repository:
-   ```
-   git clone https://github.com/stephenombuya/Data-Visualization-with-R
-   cd Data-Visualization-with-R
-   ```
+### 📊 Core Visualizations
 
-2. Open RStudio or your preferred R environment and set the working directory to the project folder.
+-   Bar Charts (Grouped, Horizontal, Customized)
+-   Line Plots (Time-series ready)
+-   Scatterplots (with regression lines & styling)
+-   Frequency Distributions
+-   Stacked Frequency Bar Charts
+-   Stacked Relative Frequency Bar Charts
 
-3. Install the required packages as mentioned in the [Requirements](#requirements) section.
+### 🎯 Advanced Capabilities
 
+-   Clean, reusable plotting functions
+-   Custom themes and styling
+-   Data transformation pipelines using `dplyr`
+-   Scalable structure for adding new visualizations
+-   Support for real-world datasets
 
-## Contributing
+----------
 
-Contributions are welcome! If you would like to improve or expand on the existing charts, follow these steps:
+## 🧱 Project Structure
 
-1. **Fork the repository**.
+`Data-Visualization-with-R/
+│── data/ # Sample datasets │── scripts/ # Visualization scripts │── outputs/ # Generated plots │── utils/ # Helper functions │── README.md
+│── LICENSE` 
 
-2. **Create a new branch (git checkout -b feature-branch)**.
+----------
 
-3. **Make your changes**.
+## ⚙️ Requirements
 
-4. **Commit your changes (git commit -m 'Add new feature')**.
+-   R (≥ 3.6)
 
-5. **Push to the branch (git push origin feature-branch)**.
+### 📦 Required Packages
 
-6. **Create a pull request**.
+`install.packages(c("ggplot2",  "dplyr",  "scales"))` 
 
+### 📚 Libraries Used
 
-## License
+-   **ggplot2** → Advanced visualization grammar
+-   **dplyr** → Data manipulation
+-   **scales** → Formatting axes and labels
 
-This project is licensed under the MIT License. See the [LICENSE](https://github.com/stephenombuya/Data-Visualization-with-R/blob/main/LICENSE) file for details.
+----------
 
+## 🛠️ Installation
 
+Clone the repository:
+
+`git clone https://github.com/stephenombuya/Data-Visualization-with-R cd Data-Visualization-with-R` 
+
+Open RStudio (or your preferred IDE), then:
+
+`setwd("path/to/Data-Visualization-with-R")` 
+
+Install dependencies and you're good to go.
+
+----------
+
+## 📊 Usage Examples
+
+### 🔹 Bar Chart
+
+`ggplot(data, aes(x = category, y = value))  + geom_bar(stat =  "identity", fill =  "steelblue")  + theme_minimal()` 
+
+### 🔹 Scatter Plot with Regression
+
+`ggplot(data, aes(x = x_var, y = y_var))  + geom_point()  + geom_smooth(method =  "lm", se =  FALSE)  + theme_classic()` 
+
+----------
+
+## 📈 Output
+
+All generated visualizations can be exported as:
+
+-   PNG
+-   JPEG
+-   PDF
+
+Example:
+
+`ggsave("outputs/plot.png")` 
+
+----------
+
+## 🧪 Future Improvements (Roadmap)
+
+-   🔥 Interactive visualizations using `plotly`
+-   📊 Dashboard integration (Shiny)
+-   📦 Turn into an R package
+-   ⚡ Automated report generation (R Markdown)
+-   🧠 Add statistical analysis overlays
+
+----------
+
+## 🤝 Contributing
+
+Contributions are welcome — let’s make this better together.
+
+### Steps:
+
+1.  Fork the repository
+2.  Create a feature branch
+    
+    `git checkout -b feature/your-feature` 
+    
+3.  Commit your changes
+    
+    `git commit -m "Add: new visualization feature"` 
+    
+4.  Push and open a Pull Request
+
+----------
+
+## 📄 License
+
+This project is licensed under the **MIT License**.  
+See the `LICENSE` file for details.
